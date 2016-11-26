@@ -1,0 +1,19 @@
+{
+  "name": "nobook-pixi-gesture",
+  "version": "1.0.0",
+  "description": "",
+  "main": "NBGesture.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nobook/nobook-pixi-gesture.git"
+  },
+  "author": "Barton Jin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nobook/nobook-pixi-gesture/issues"
+  },
+  "homepage": "https://github.com/nobook/nobook-pixi-gesture#readme"
+}
