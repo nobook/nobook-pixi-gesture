@@ -1,6 +1,6 @@
 {
   "name": "nobook-pixi-gesture",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "NBGesture.js",
   "scripts": {
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/nobook/nobook-pixi-gesture/issues"
   },
-  "homepage": "https://github.com/nobook/nobook-pixi-gesture#readme"
+  "homepage": "https://github.com/nobook/nobook-pixi-gesture#readme",
+  "dependencies": {
+    "nobook-point": "^1.0.0"
+  }
 }

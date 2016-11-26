@@ -2,7 +2,7 @@
  *
  * Created by onlyjyf on 8/10/15.
  */
-var NBPoint = require('./NBPoint');
+var NBPoint = require('nobook-point');
 var NBGesture = {
     gesture: {TAP: "gesture.tap", TAP_MISS: "gesture.tapMiss", ZOOM: "gesture.zoom", ROTA: "gesture.rota", PAN: "gesture.pan", HOLD: "hold", CLONE : 'gesture.clone'},
 
