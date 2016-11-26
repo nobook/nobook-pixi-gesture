@@ -72,7 +72,7 @@ var NBGesture = {
             target.scale.y += (targetScale.y - target.scale.y) * speed;
 
             // 发送消息
-            target.emit(NBEvent.change.ZOOM, {zoom:target.scale.x});
+            target.emit('change.zoom', {zoom:target.scale.x});
         }
 
         container.addEventListener(TouchEvent.TOUCH_MOVE, function(e) {
