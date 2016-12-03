@@ -25,6 +25,7 @@ var NBGesture = {
         if (!target) {
             target = container;
         }
+        var enabled = true;
         // 目标对象的位置
         var targetPos = {x:target.x, y:target.y};
         // 目标对象的缩放
@@ -52,6 +53,9 @@ var NBGesture = {
             if (map.size >= 2) {
                 return;
             }
+            if (enabled === false) {
+            	return;
+            }
             map.set(e.data.identifier, {x: e.data.global.x, y: e.data.global.y});
             // 激活多点操作
             if (map.size === 2) {
@@ -76,6 +80,9 @@ var NBGesture = {
         }
 
         container.addEventListener(TouchEvent.TOUCH_MOVE, function(e) {
+        	if (enabled === false) {
+        		return;
+        	}
             // 如果
             if (map.has(e.data.identifier) && map.size === 2) {
                 // pA点有移动，pB点还是上一点
@@ -153,6 +160,13 @@ var NBGesture = {
         var o = {};
         o.getTouchCount = function() {
             return map.size;
+        }
+        // 设置是否使用手势
+        o.setGestureEnabled = function(value) {
+        	if (value === false) {
+        		target.activeZoomGesture = true;
+        	}
+        	enabled = value;
         }
         return o;
     },
