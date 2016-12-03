@@ -69,6 +69,9 @@ var NBGesture = {
 
         // 坐标更新
         function update() {
+        	if (enabled === false) {
+        		return;
+        	}
             target.x += (targetPos.x - target.x) * speed;
             target.y += (targetPos.y - target.y) * speed;
 
@@ -163,9 +166,6 @@ var NBGesture = {
         }
         // 设置是否使用手势
         o.setGestureEnabled = function(value) {
-        	if (value === false) {
-        		target.activeZoomGesture = true;
-        	}
         	enabled = value;
         }
         return o;
